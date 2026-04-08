@@ -52,7 +52,14 @@ function Stroke({ className = "" }: { className?: string }) {
 function RoundPhoto({ src, alt, className = "", priority = false }: { src: string; alt: string; className?: string; priority?: boolean }) {
   return (
     <figure className={`round ${className}`.trim()}>
-      <Image src={src} alt={alt} fill sizes="(max-width: 900px) 33vw, 220px" priority={priority} />
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="(max-width: 900px) 33vw, 220px"
+        priority={priority}
+        unoptimized
+      />
     </figure>
   );
 }
