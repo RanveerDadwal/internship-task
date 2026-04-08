@@ -3,12 +3,12 @@ import Image from "next/image";
 const navItems = ["Home", "Studio", "Services", "Contact", "FAQ's"];
 
 const heroPeople = [
-  { src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=360&q=80", alt: "Team member 1", cls: "p1" },
-  { src: "https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=360&q=80", alt: "Team member 2", cls: "p2" },
-  { src: "https://images.unsplash.com/photo-1546961329-78bef0414d7c?auto=format&fit=crop&w=360&q=80", alt: "Team member 3", cls: "p3" },
-  { src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=360&q=80", alt: "Team member 4", cls: "p4" },
-  { src: "https://images.unsplash.com/photo-1542596594-649edbc13630?auto=format&fit=crop&w=360&q=80", alt: "Team member 5", cls: "p5" },
-  { src: "https://images.unsplash.com/photo-1504257432389-52343af06ae3?auto=format&fit=crop&w=360&q=80", alt: "Team member 6", cls: "p6" },
+  { src: "/avatars/team-1.svg", alt: "Team member 1", cls: "p1" },
+  { src: "/avatars/team-2.svg", alt: "Team member 2", cls: "p2" },
+  { src: "/avatars/team-3.svg", alt: "Team member 3", cls: "p3" },
+  { src: "/avatars/team-4.svg", alt: "Team member 4", cls: "p4" },
+  { src: "/avatars/team-5.svg", alt: "Team member 5", cls: "p5" },
+  { src: "/avatars/team-6.svg", alt: "Team member 6", cls: "p6" },
 ];
 
 const offerRows = [
@@ -52,14 +52,7 @@ function Stroke({ className = "" }: { className?: string }) {
 function RoundPhoto({ src, alt, className = "", priority = false }: { src: string; alt: string; className?: string; priority?: boolean }) {
   return (
     <figure className={`round ${className}`.trim()}>
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        sizes="(max-width: 900px) 33vw, 220px"
-        priority={priority}
-        unoptimized
-      />
+      <Image src={src} alt={alt} fill sizes="(max-width: 900px) 33vw, 220px" priority={priority} />
     </figure>
   );
 }
@@ -155,7 +148,7 @@ export default function Home() {
 
         <div className="feature-media">
           <RoundPhoto
-            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
+            src="/scenes/meeting-1.svg"
             alt="Business meeting"
             className="feature-round lg"
             priority
@@ -167,7 +160,7 @@ export default function Home() {
       <section className="container feature bottom-feature section-space">
         <div className="feature-media">
           <RoundPhoto
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
+            src="/scenes/meeting-2.svg"
             alt="Team collaboration"
             className="feature-round md"
           />
@@ -233,11 +226,11 @@ export default function Home() {
           </p>
         </article>
 
-        <RoundPhoto src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&w=320&q=80" alt="Client 1" className="float f1" />
-        <RoundPhoto src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=320&q=80" alt="Client 2" className="float f2" />
-        <RoundPhoto src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=320&q=80" alt="Client 3" className="float f3" />
-        <RoundPhoto src="https://images.unsplash.com/photo-1542206395-9feb3edaa68d?auto=format&fit=crop&w=320&q=80" alt="Client 4" className="float f4" />
-        <RoundPhoto src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?auto=format&fit=crop&w=320&q=80" alt="Client 5" className="float f5" />
+        <RoundPhoto src="/avatars/team-1.svg" alt="Client 1" className="float f1" />
+        <RoundPhoto src="/avatars/team-2.svg" alt="Client 2" className="float f2" />
+        <RoundPhoto src="/avatars/team-3.svg" alt="Client 3" className="float f3" />
+        <RoundPhoto src="/avatars/team-4.svg" alt="Client 4" className="float f4" />
+        <RoundPhoto src="/avatars/team-5.svg" alt="Client 5" className="float f5" />
       </section>
 
       <section className="newsletter-wrap">

@@ -19,6 +19,11 @@ Open `http://localhost:3000`.
 
 ## Docker (Submission Requirement)
 
+The project is fully self-contained for submission:
+- all UI images are bundled locally in `public/`
+- the production build uses webpack for stable container builds
+- the app runs on port `3000`
+
 ### Build and run with Docker Compose
 
 ```bash
