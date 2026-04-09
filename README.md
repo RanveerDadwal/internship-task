@@ -26,6 +26,37 @@ npm run lint
 npm run build
 ```
 
+## Deploy To Vercel
+
+This project is ready to deploy on Vercel as a standard Next.js app. No extra environment variables are required for the current codebase.
+
+### Vercel dashboard
+
+1. Push this repository to GitHub.
+2. Go to Vercel and click **Add New... -> Project**.
+3. Import the GitHub repository.
+4. Keep the detected framework as **Next.js**.
+5. Confirm these settings:
+   - Build Command: `npm run build`
+   - Output Directory: `.next`
+   - Install Command: `npm install`
+6. Click **Deploy**.
+
+After the first deployment finishes, Vercel will give you a live URL and will automatically redeploy on every push to the connected branch.
+
+### Vercel CLI
+
+```bash
+npm i -g vercel
+vercel
+```
+
+For production deployment after setup:
+
+```bash
+vercel --prod
+```
+
 ## Docker (Submission Requirement)
 
 The project is fully self-contained for submission:
